@@ -1,0 +1,155 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #cccccc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    color: #0033ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+#navbar {
+    background-color: #333;
+    height: 40px;
+    text-align: center;
+}
+
+#navbar ul {
+    width: 100%;
+    list-style-type: none;
+    display: block;
+}
+
+#navbar ul a li {
+    margin-left: 0px;
+    padding: 10px;
+    width: 100px;
+    float: left;
+}
+
+#navbar ul li:hover {
+    background-color: #000000;
+    font-weight: normal;
+}
+
+#navbar ul a li {
+    color: #eeeeee;
+}
+
+#navbar ul a:hover {
+    text-decoration: none;
+}
+
+#container {
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+#content {
+    margin-left: 30px;
+    margin-right: 35px;
+    margin-top: 20px;
+}
+
+label {
+    width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:10px;
+}
+
+input {
+    display: block;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+.article {
+    margin-bottom: 25px;
+}
+
+.failure {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#navigator {
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+#navigator p {
+    margin-bottom: 5;
+    margin-top: 5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;   
+}
+
+li {
+    margin-left: 15px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #navbar ul a li {
+        width: 100%;
+        float: none;
+        margin: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #navbar ul a {
+        margin: 0px;
+    }
+
+    #container {
+        margin: 0px;
+    }
+
+    #navbar {
+        background-color: #333;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+}
