@@ -1,27 +1,36 @@
 <?php
-define("ADMIN", true);
-require_once "../include/config.php";
-require_once ROOTDIR . "template/publictop.php";
-
-echo "<h1>Welcome, " . $_SESSION["username"] . "!</h1>";
-
-if (isset($_GET["m"])) {
-    switch ($_GET["m"]) {
-        case 1:
-            echo "<p class='success'>Article successfully deleted!</p>";
-            break;
-        case 2:
-            echo "<p class='success'>Article successfully created!</p>";
-            break;
-        case 3:
-            echo "<p class='failure'>An error occured.</p>";
-    }
-}
-
+    define("ADMIN", true);
+    require_once "../include/config.php";
+    require_once ROOTDIR . "template/top.php";
 ?>
-<a href="write.php">Write a new article</a><p>
-<a href="list.php">All articles</a>
+
+<h1 class='page-header'>
+    <?php
+        echo "Welcome, " . $_SESSION["username"] . "!";
+    ?>
+</h1>
 
 <?php
-require_once ROOTDIR . "template/publicbottom.php";
+    if (isset($_GET["m"])) {
+        switch ($_GET["m"]) {
+            case 1:
+                echo "<div class='alert alert-success'>Article successfully deleted!</div>";
+                break;
+            case 2:
+                echo "<div class='alert alert-success'>Article successfully created!</div>";
+                break;
+            case 3:
+                echo "<div class='alert alert-danger'>An error occured.</div>";
+        }
+    }
+?>
+<div class="panel">
+    <a href="write.php">Write a new article</a><p>
+</div>
+<div class="panel">
+    <a href="list.php">All articles</a><p>
+</div>
+
+<?php
+    require_once ROOTDIR . "template/bottom.php";
 ?>
