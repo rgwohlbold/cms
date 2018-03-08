@@ -14,7 +14,7 @@ function getPageCount($conn) {
 // It returns $default if it is specified
 function getNumeric($name, $redirect, $default=NULL) {
     if (isset($_GET[$name])) {
-        if (!is_numeric($_GET[$name])) {
+        if (!is_numeric($_GET[$name]) || $_GET[$name] < 0) {
             header("Location: ./" . $redirect);
             exit();
         }
