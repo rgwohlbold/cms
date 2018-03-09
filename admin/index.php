@@ -2,28 +2,30 @@
     define("ADMIN", true);
     require_once "../include/config.php";
     require_once ROOTDIR . "template/top.php";
+
+    $header = "Welcome, " . $_SESSION["username"] . "!";
+
+    if (isset($_GET["m"])) {
+        if ($_GET["m"] == 1) {
+            $alert = "<div class='alert alert-success'>Article successfully deleted!</div>";
+        } else if ($_GET["m"] == 2) {
+            $alert = "<div class='alert alert-success'>Article successfully created!</div>";
+        } else if ($_GET["m"] == 3) {
+            $alert = "<div class='alert alert-success'>Article successfully deleted!</div>";
+        }
+    } else {
+        $alert = "";
+    }
 ?>
 
 <h1 class='page-header'>
-    <?php
-        echo "Welcome, " . $_SESSION["username"] . "!";
-    ?>
+    <?php echo $header; ?>
 </h1>
 
 <?php
-    if (isset($_GET["m"])) {
-        switch ($_GET["m"]) {
-            case 1:
-                echo "<div class='alert alert-success'>Article successfully deleted!</div>";
-                break;
-            case 2:
-                echo "<div class='alert alert-success'>Article successfully created!</div>";
-                break;
-            case 3:
-                echo "<div class='alert alert-danger'>An error occured.</div>";
-        }
-    }
+    echo $alert;
 ?>
+
 <div class="panel">
     <a href="write.php">Write a new article</a><p>
 </div>
