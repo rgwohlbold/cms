@@ -40,8 +40,8 @@
     $stmt->bind_result($id, $title, $text, $time);
     $stmt->fetch();
     while ($title != NULL) {
-        $article_element += "<div class='panel'><h1><small>" . $title . "</small></h1>\n";
-        $article_element += $text . "<p>\n</div>\n";
+        $article_element = $article_element . "<div class='panel'><h1><small>" . $title . "</small></h1>\n";
+        $article_element = $article_element . $text . "<p>\n</div>\n";
         $stmt->bind_result($id, $title, $text, $time);
         $stmt->fetch();
     }

@@ -19,9 +19,9 @@
                 $msg = "<div class='alert alert-success'>Article successfully updated!</div>";
             }
             else {
-                $msg = "<div class='alert alert-danger'>The title cannot be empty!</div>";
-                $text = $_POST["content"];
                 $title = "";
+                $text = $_POST["content"];
+                $msg = "<div class='alert alert-danger'>Title cannot be empty.</div>";
             }
         }
 
@@ -73,6 +73,7 @@
 
 <div class="panel">
     <form method="post">
+
         <div class="form-group">
             <label for="title">Title</label>
             <input class="form-control" id="title" type="text" name="title" value='<?php echo $title; ?>'>
